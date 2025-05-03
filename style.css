@@ -1,0 +1,668 @@
+
+
+:root {
+    --font-family: "Roboto", sans-serif;
+    --second-family: "Ermilov", sans-serif;
+    --third-family: "Inter", sans-serif;
+    --font3: "Codec Pro", sans-serif;
+    --font4: "Tactic Round", sans-serif;
+    --font5: "Ubuntu", sans-serif;
+  }
+
+
+
+/* Mobile First подход */
+
+/* Шрифты */
+@font-face {
+  font-family: 'Ermilov Bold';
+  src: url('./fonts/Ermilov.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "Ermilov Bold", sans-serif;
+}
+
+/* Базовые стили для всех устройств (мобильные в первую очередь) */
+.container {
+    width: 100%;
+   padding: 0 20px 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .header_container {
+   padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f9f2e5; /* Цвет фона */
+    z-index: 1000; /* Убедимся, что шапка выше остальных элементов */
+    
+    margin: 0 auto;
+    border-bottom: 1px solid #dbd3c2;
+}
+
+  
+  .nav-mobile-container {
+    width: 168px;
+    height: 44px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  
+  .btn-favorite {
+    background: #f9f2e5;
+    cursor: pointer;
+  }
+
+
+  /* burger */
+  /* CSS */
+.burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    background: #efa201;
+
+  }
+
+
+  .main-section {
+    padding: 50px 0 60px 0;
+  }
+
+  /* Хлебные крошки */
+
+  .breadcrumb {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .breadcrumb a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #777;
+}
+
+.breadcrumb a.active {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Секция 1 */
+
+.title-text {
+  font-family: "Ermilov", sans-serif;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.15;
+text-transform: uppercase;
+color: #000;
+margin-bottom: 12px;
+}
+
+.text-content {
+  font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.4;
+color: #777;
+}
+
+.button-rewiev {
+  font-family: "Roboto", sans-serif;
+  border-radius: 8px;
+    width: 350px;
+    height: 87px;
+    background: #efa201;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    color: #000;
+  margin: 24px auto 60px;
+}
+.button-rewiev:hover {
+  background-color: #d18b01;
+}
+
+.subtitle-text {
+  font-family: "Ermilov", sans-serif;
+font-weight: 700;
+font-size: 24px;
+line-height: 1.2;
+color: #000;
+margin-bottom: 12px;
+}
+
+/* Карточки услуг */
+
+
+
+.service-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+padding: 24px 0 60px;
+  gap: 16px; 
+
+}
+
+.service-card {
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 24px 32px;
+  width: 350px;
+  background: #f9f2e5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card-quantity-auto {
+  margin: 24px auto 16px;
+  border-radius: 16px;
+  padding: 32px 20px;
+  min-width: 350px;
+  height: 198px;
+  background: #efa201;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.quantity-card-text {
+
+  font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-size: 18px;
+line-height: 1.4;
+text-align: center;
+color: #000;
+}
+
+.quantity-card-numbers {
+ margin: 24px auto 0;
+  display: flex;
+  justify-content: space-between;
+  width: 264px;
+height: 60px;
+}
+
+.numbers {
+  border: 1.20px solid #f9f2e5;
+border-radius: 5px;
+width: 60px;
+height: 60px;
+background: #fff;
+font-family: "Ermilov", sans-serif;
+font-weight: 700;
+font-size: 33px;
+line-height: 1.2;
+color: #000;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+
+/* Заголовок и стрелка — в одной строке */
+.service-card h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Текст по умолчанию скрыт, но без display: none */
+.service-text {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+
+}
+
+/* При раскрытии — плавно показываем */
+.service-card.expanded .service-text {
+  max-height: 500px; /* достаточно большое значение */
+  opacity: 1;
+}
+
+/* Поворот стрелки */
+.service-card.expanded .toggle-icon {
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+  /* Скрытые элементы */
+  .nav-desktop-list {
+    display: none;
+  }
+  
+  .language-switcher {
+    display: none;
+  }
+  
+  .header_nav {
+    display: flex;
+  }
+
+  .feedback-button {
+    display: none;
+  }
+
+
+
+
+
+
+  /* Планшеты (от 768px) */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 991px;
+      padding: 0 40px 0 40px;
+    }
+    .header_container {
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+    .service-card-container {
+      display: flex;
+      flex-wrap: wrap; /* Позволяет карточкам переноситься */
+     
+      justify-content: space-between; /* Равномерное распределение */
+      
+  }
+
+  .service-card-container {
+    flex-direction: row;
+  }
+  
+  .service-card {
+      width: calc(50% - 10px); /* Делим пространство на 2 равные части с учетом отступа */
+     
+  }
+  
+ .title-text {
+  margin-bottom: 25px;
+ }
+.button-rewiev {
+  margin-top: 40px;
+}
+
+/* Количество машин */
+.card-quantity-auto {
+  border-radius: 16px;
+  padding: 32px 120px;
+  min-width: 754px;
+  height: 173px;
+}
+
+.quantity-card-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+  color: #000;
+}
+
+
+  
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  /* Маленькие десктопы (от 992px) */
+  @media (min-width: 992px) {
+    .container {
+      max-width: 1280px;
+    }
+
+ 
+
+  .subtitle-text {
+    font-family: "Ermilov", sans-serif;
+font-weight: 700;
+font-size: 60px;
+line-height: 1.1;
+color: #000;
+  }
+
+  .text-content {
+    font-size: 20px;
+  }
+
+  /* Количество машин */
+
+  .card-quantity-auto {
+    padding: 44px 120px;
+    height: 262px;
+  }
+  
+  .quantity-card-text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    
+  
+  }
+
+  .quantity-card-numbers {
+
+    width: 424px;
+    height: 100px;
+  }
+  
+  .numbers {
+    border: 2px solid #f9f2e5;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    font-family: "Ermilov", sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.2;
+    color: #000;
+  
+  }
+  
+  }
+
+
+  /* Средние десктопы (от 1200px) */
+  @media (min-width: 1281px) {
+    .container {
+      max-width: 1440px;
+      padding: 0 60px 0 60px;
+    }
+   .burger {
+    display: none;
+   }
+   .nav-mobile-container {
+    width: 79px;
+   }
+
+   .nav-desktop-list {
+    display: flex;
+    gap: 15px;
+    
+  }
+
+  .nav-desktop-item {
+    position: relative; /* Теперь позиция будет определяться внутри элемента */
+    display: inline-block;
+    padding-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: "Ermilov", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #000;
+  }
+
+  .underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-desktop-item:hover .underline,
+.nav-desktop-item.active .underline {
+    width: 100%;
+}
+
+.nav-tel-number a {
+  display: inline-block;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.nav-tel-number a:hover {
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+  .language-switcher {
+    border: 1px solid #dbd3c2;
+    border-radius: 4px;
+    padding: 12px 6px;
+    width: 55px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #fff;
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    margin-left: 20px;
+}
+
+.language-switcher:hover {
+    background-color: #f0f0f0;
+}
+
+.arrow {
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(-45deg);
+}
+.feedback-button {
+  
+  display: block;
+  align-items: center;
+  background: #efa201;
+  border-radius: 5px;
+  padding: 12px 28px;
+  width: 191px;
+  height: 40px;
+  border: none;
+  color: white;
+  cursor: pointer;
+   font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  color: #000;
+  margin-left: 10px;
+}
+
+.feedback-button:hover {
+  background-color: #d18b01; /* Темнее при наведении */
+}
+
+.header_container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Секция 1 */
+.title-text {
+  font-family: "Ermilov", sans-serif;
+font-weight: 900;
+font-size: 88px;
+line-height: 1;
+color: #000;
+text-transform: none;
+}
+
+.text-content {
+  max-width: 1000px;
+}
+
+/* Количество машин */
+
+.card-quantity-auto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+gap: 40px;
+  border-radius: 16px;
+  padding: 44px 120px;
+width: 536px;
+ height: 530px;
+}
+
+.quantity-card-text {
+font-weight: 700;
+font-size: 24px;
+line-height: 1.4;
+text-align: center;
+
+
+}
+
+.quantity-card-numbers {
+  width: 424px;
+  height: 100px;
+}
+
+.numbers {
+  border: 2px solid #f9f2e5;
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+
+}
+
+  }
+
+
+ 
+  
+
+
+
+
+
+
+  /* Большие десктопы (от 1400px) */
+  @media (min-width: 1441px) {
+    .container {
+      max-width: 1920px;
+      padding: 0 120px 0 120px 0;
+    }
+
+    .header_container {
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+
+    .nav-desktop-item {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 0.9;
+      color: #000;
+    }
+    .nav-desktop-list {
+      gap: 25px;
+    }  
+
+    
+/* Количество машин */
+.card-quantity-auto {
+  border-radius: 16px;
+  padding: 44px 120px;
+  width: 683px;
+  height: 412px;
+}
+
+
+
+
+.numbers {
+  border: 2px solid #f9f2e5;
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+
+}
+   
+  }
+  
+
+
+
+
+
+
+  /* 
+    Примечания:
+    1. Мы используем max-width вместо width на больших экранах,
+       чтобы контейнер мог адаптироваться к меньшим размерам окна.
+    2. Отступы padding-left и padding-right создают внутренние поля
+       между контентом и краями контейнера.
+    3. Значения max-width для разных размеров экрана соответствуют
+       стандартной практике (аналогично Bootstrap).
+  */

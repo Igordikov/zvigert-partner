@@ -277,6 +277,34 @@ justify-content: center;
   transform: rotate(180deg);
 }
 
+/* Кволити */
+
+.quality-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quality-card {
+ 
+  border-radius: 16px;
+padding: 24px 32px;
+min-width: 350px;
+height: 192px;
+background: #f9f2e5;
+}
+
+.quality-title {
+
+  font-family: "Ermilov", sans-serif;
+font-weight: 700;
+font-size: 20px;
+line-height: 1.2;
+color: #000;
+display: block;
+margin: 16px 0;
+}
+
 
 
 
@@ -299,6 +327,8 @@ justify-content: center;
   .feedback-button {
     display: none;
   }
+
+
 
 
 
@@ -355,6 +385,41 @@ justify-content: center;
   color: #000;
 }
 
+/* Кволити */
+.quality-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.quality-container > * {
+  display: flex; /* Если нужно центрировать содержимое */
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray; /* Просто для визуализации */
+}
+
+
+.quality-card {
+ 
+  border-radius: 16px;
+padding: 24px 32px;
+min-width: 350px;
+height: 192px;
+background: #f9f2e5;
+}
+
+.quality-title {
+
+  font-family: "Ermilov", sans-serif;
+font-weight: 700;
+font-size: 20px;
+line-height: 1.2;
+color: #000;
+display: block;
+margin: 16px 0;
+}
+
 
   
   }
@@ -380,10 +445,10 @@ justify-content: center;
 
   .subtitle-text {
     font-family: "Ermilov", sans-serif;
-font-weight: 700;
-font-size: 60px;
-line-height: 1.1;
-color: #000;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+   
   }
 
   .text-content {
@@ -423,9 +488,24 @@ color: #000;
     color: #000;
   
   }
-  
+
+  /* Кволити */
+
+  .quality-card {
+    border-radius: 16px;
+padding: 32px 44px;
+width: 592px;
+height:250px;
+
   }
 
+  .quality-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    
+  }
+  }
 
   /* Средние десктопы (от 1200px) */
   @media (min-width: 1281px) {
@@ -562,15 +642,16 @@ text-transform: none;
 
 /* Количество машин */
 
+.quantity-section {
+  display: flex;
+}
+
 .card-quantity-auto {
   display: flex;
   flex-direction: column;
   justify-content: center;
 gap: 40px;
-  border-radius: 16px;
-  padding: 44px 120px;
-width: 536px;
- height: 530px;
+
 }
 
 .quantity-card-text {
@@ -594,6 +675,34 @@ text-align: center;
   height: 100px;
 
 }
+
+/* Кволити */
+
+.quality-container {
+display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px; /* если нужен отступ между элементами */
+}
+
+.quality-title {
+
+  font-family: "Ermilov", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.quality-card {
+  border-radius: 16px;
+  padding: 32px 44px;
+  width: 369px;
+  height: 223px;
+
+}
+
 
   }
 
